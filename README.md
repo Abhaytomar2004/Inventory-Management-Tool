@@ -1,7 +1,7 @@
 # 📦 Inventory Management Tool
 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.7.0-green.svg)
-![Java](https://img.shields.io/badge/Java-17-blue.svg)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.7.0-green.svg)
+![Java](https://img.shields.io/badge/Java-21-blue.svg)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
 
 A robust Spring Boot application for managing inventory with secure authentication and RESTful API endpoints.
