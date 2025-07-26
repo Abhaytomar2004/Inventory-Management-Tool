@@ -3,6 +3,7 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.7.0-green.svg)
 ![Java](https://img.shields.io/badge/Java-21-blue.svg)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue).
 
 A robust Spring Boot application for managing inventory with secure authentication and RESTful API endpoints.
 
@@ -13,12 +14,13 @@ A robust Spring Boot application for managing inventory with secure authenticati
 - 📊 Manage product quantities
 - 📱 Responsive API design
 - 🔄 Paginated product listings
+- 🐳 Docker container support
 
 ## 🛠️ Prerequisites
 
 Before you begin, ensure you have installed:
 
-- Java 17 or higher
+- Java 21 or higher
 - Maven 3.8.6 or higher
 - MySQL 8.0 or compatible database
 - Postman (for API testing)
@@ -50,6 +52,29 @@ mvn clean install
 
 mvn spring-boot:run
 ```
+
+Option 2: **Docker Deployment**
+1. Build Docker image
+```
+docker build -t inventory-management .
+```
+2. Run with Docker Compose
+```
+docker-compose up -d
+```
+
+This will start:
+
+MySQL container
+
+Spring Boot application container
+
+Automatic database initialization
+
+Access the application
+
+API will be available at http://localhost:8082
+
 
 🌐 API Endpoints
 
@@ -128,9 +153,22 @@ Parameters: page, size (for pagination)
 
 Authentication: Required (JWT)
 
+
 Response: Paginated list of products
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2814fd24-8cf7-4aa0-8430-a1cda6f5d5e5" />
+
+🐳 Docker Configuration Details
+
+The application includes:
+
+Dockerfile for building the Spring Boot application image
+
+docker-compose.yml for orchestration with MySQL
+
+Automatic database schema initialization
+
+Environment variables for easy configuration
 
 
 
