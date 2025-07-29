@@ -4,17 +4,12 @@ services:
   app:
     build: .
     ports:
-<<<<<<< HEAD
-      - "${HOST_PORT:-8082}:${PORT:-8082}" 
-=======
-      - "8082:8082"
->>>>>>> e5a846e622cab08e68c3d1be8df052d5d7d697df
+      - "${HOST_PORT:-8082}:${PORT:-8082}"
     environment:
-      PORT: ${PORT:-8082}  
+      PORT: ${PORT:-8082}
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-lol3}?allowPublicKeyRetrieval=true&useSSL=false"
       SPRING_DATASOURCE_USERNAME: ${DB_USER:-root}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-      
     depends_on:
       mysql:
         condition: service_healthy
@@ -27,7 +22,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE:-lol3}
     ports:
-      - "3306:3306"  
+      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
@@ -40,10 +35,7 @@ services:
 
 volumes:
   mysql_data:
-<<<<<<< HEAD
 
 networks:
   backend:
     driver: bridge
-=======
->>>>>>> e5a846e622cab08e68c3d1be8df052d5d7d697df
