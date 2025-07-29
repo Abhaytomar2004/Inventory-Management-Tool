@@ -4,7 +4,11 @@ services:
   app:
     build: .
     ports:
+<<<<<<< HEAD
       - "${HOST_PORT:-8082}:${PORT:-8082}" 
+=======
+      - "8082:8082"
+>>>>>>> e5a846e622cab08e68c3d1be8df052d5d7d697df
     environment:
       PORT: ${PORT:-8082}  
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-lol3}?allowPublicKeyRetrieval=true&useSSL=false"
@@ -36,7 +40,10 @@ services:
 
 volumes:
   mysql_data:
+<<<<<<< HEAD
 
 networks:
   backend:
     driver: bridge
+=======
+>>>>>>> e5a846e622cab08e68c3d1be8df052d5d7d697df
