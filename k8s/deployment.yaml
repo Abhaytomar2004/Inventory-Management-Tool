@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-mangement-tool
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-mangement-tool
+  template:
+    metadata:
+      labels:
+        app: inventory-mangement-tool
+    spec:
+      containers:
+      - name: inventory-mangement-tool
+        image: inventory_management_tool:latest
+        imagePullPolicy: Never  # ← ADD THIS LINE
+        ports:
+        - containerPort: 8082
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:mysql://localhost:3306/inventory_db?allowPublicKeyRetrieval=true&useSSL=false"
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "root"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "Anjana@3176"
