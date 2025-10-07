@@ -32,3 +32,26 @@ build/
 ### VS Code ###
 .vscode/
 .env 
+# Terraform files
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.backup
+**/.terraform.tfstate.lock.info
+
+# Terraform provider cache
+.terraform/providers/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+EOF
