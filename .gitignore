@@ -32,3 +32,24 @@ build/
 ### VS Code ###
 .vscode/
 .env 
+
+### Jenkins ###
+.jenkins/
+*.hpi
+work/
+
+### Docker ###
+*.log
+.docker/
+
+### Kubernetes ###
+*.kubeconfig
+
+### SonarQube ###
+.sonar/
+.scannerwork/
+
+### Test Reports ###
+**/surefire-reports/
+**/test-results/
+coverage/
